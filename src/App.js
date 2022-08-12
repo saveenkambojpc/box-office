@@ -6,6 +6,7 @@ import {
 import Home from "./pages/Home";
 import Navbar from './components/Navbar';
 import Starred from "./pages/Starred";
+import Title from "./components/Title";
 
 const routes = [
   {path: "/",component:<Home/>},
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Title title="Box Office" subTitle="This is subtitle" />
 
       <Switch>
 
