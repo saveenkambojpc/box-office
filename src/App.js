@@ -6,12 +6,13 @@ import {
 import Home from "./pages/Home";
 import Navbar from './components/Navbar';
 import Starred from "./pages/Starred";
-import Title from "./components/Title";
+import Show from "./pages/Show";
 
 const routes = [
   {path: "/",component:<Home/>},
   {path: "/starred",component:<Starred/>},
-  {path: null, component:"404 Not Found please create it first"}
+  {path: "/show/:id",component:<Show />},
+  {path: null, component:"404 Not Found please create it first"}, //keep it is last
 ]
 
 
