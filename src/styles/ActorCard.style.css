@@ -1,0 +1,14 @@
+.actor-card{
+    margin:5px;
+    border-radius: 10px;
+    transition: 500ms;
+    transition-delay: 200ms;
+}
+.actor-card:hover{
+    transform: scale(1.05);
+}
+
+.actor-card img{
+    border-radius: inherit;
+    width: 150px;
+}

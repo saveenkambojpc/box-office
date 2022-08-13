@@ -11,7 +11,7 @@ import Title from "./components/Title";
 const routes = [
   {path: "/",component:<Home/>},
   {path: "/starred",component:<Starred/>},
-  {path: null, component:"404 Not Found"}
+  {path: null, component:"404 Not Found please create it first"}
 ]
 
 
@@ -21,24 +21,13 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Title title="Box Office" subTitle="This is subtitle" />
 
       <Switch>
 
         {
           routes.map(e=><Route key={e.path} exact path={e.path}>{e.component}</Route>)
         }
-        {/* <Route exact path="/">
-          <Home />
-        </Route>
-
-        <Route exact path="/starred">
-          <Starred />
-        </Route>
-
-        <Route>
-          404 Page Not found
-        </Route> */}
+      
 
       </Switch>
     </Router>
