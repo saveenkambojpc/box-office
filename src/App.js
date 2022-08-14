@@ -12,9 +12,10 @@ import Title from "./components/Title";
 
 const routes = [
   { path: "/", component: <Home /> },
+  { path: "/box-office", component: <Home /> },
   { path: "/starred", component: <Starred /> },
   { path: "/show/:id", component: <Show /> },
-  { path: null, component: "404 Not Found please create it first" }, //keep it is last
+  // { path: null, component: "404 Not Found please create it first" }, //keep it is last
 ]
 
 
