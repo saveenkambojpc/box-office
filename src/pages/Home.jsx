@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import ActorGrid from "../components/actor/ActorGrid";
+import CustomRadio from "../components/CustomRadio";
 import ShowGrid from "../components/show/ShowGrid";
-import Title from "../components/Title";
 import { apiGet } from "../misc/config";
+import { useLastQuery } from "../misc/custom-hooks";
+import { RadioInputsWrapper, SearchButtonWrapper, SearchInput } from "./Home.style";
 
 
 
 
 function Home() {
-    const [input, setInput] = useState('');
+    const [input, setInput] = useLastQuery();
     const [result, setResult] = useState(null);
 
     const [searchOption, setSearchOption] = useState('shows');
@@ -22,8 +24,12 @@ function Home() {
     }
 
     const onSearchOptionChange = (e) => {
+        console.log("On Radio Change");
         setSearchOption(e.target.value);
     }
+    const onRadioChange = ev => {
+        setSearchOption(ev.target.value);
+    };
     const onSearch = async () => {
         const result = await apiGet(`/search/${searchOption}?q=${input}`);
         setResult(result);
@@ -46,7 +52,7 @@ function Home() {
 
         if (result && result.length > 0) {
 
-            console.log(result);
+           
 
             return (
                 <div>
@@ -61,20 +67,33 @@ function Home() {
 
     return (
         <div>
-            <Title title="Box Office" subTitle="This is subtitle" />
 
-            <input type="text" value={input} onChange={onChange} onKeyDown={handleKeyDown} />
-            <div>
+            <SearchInput type="text" value={input} onChange={onChange} onKeyDown={handleKeyDown} />
+            <RadioInputsWrapper>
                 <div>
-                    <label htmlFor="">Shows</label>
-                    <input type="radio" checked={isShowOption} value="shows" name="" id="" onChange={onSearchOptionChange} />
+                    <CustomRadio
+                        label="Shows"
+                        id="shows-search"
+                        value="shows"
+                        checked={isShowOption}
+                        onChange={onRadioChange}
+                    />
                 </div>
+
                 <div>
-                    <label htmlFor="">Actor</label>
-                    <input type="radio" checked={!isShowOption} value="people" name="" id="" onChange={onSearchOptionChange} />
+                    <CustomRadio
+                        label="Actors"
+                        id="actors-search"
+                        value="people"
+                        checked={!isShowOption}
+                        onChange={onRadioChange}
+                    />
                 </div>
-            </div>
-            <button onClick={handleSubmit}>Submit</button>
+            </RadioInputsWrapper>
+            <SearchButtonWrapper>
+
+                <button onClick={handleSubmit}>Submit</button>
+            </SearchButtonWrapper>
             {renderResult()}
         </div>
     )

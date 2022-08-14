@@ -10,7 +10,6 @@ const ActorCard = ({ data }) => {
   const _name = data.person.name;
 
   const birthday = data.person.birthday && data.person.birthday;
-  console.log(data.person)
   return (
     <>
       {

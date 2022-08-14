@@ -2,6 +2,7 @@ import React from 'react'
 import { useShows } from '../../misc/custom-hooks'
 import { FlexGrid } from '../../styles/Styled'
 import ShowCard from './ShowCard'
+
 // import "../../styles/ShowGrid.style.css";
 const ShowGrid = ({ result }) => {
 
