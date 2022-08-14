@@ -1,4 +1,4 @@
-// CSS for ShowCard
+// CSS for ShowCard and ShowGrid ---
 import styled from "styled-components";
 
 export const FlexGrid = styled.div`
@@ -38,6 +38,8 @@ button.activeStar{
     color:yellow;
 }
 
+
+
 .active{
     padding:0 8px;
     
@@ -51,8 +53,10 @@ button.activeStar{
     transiton-delay:inherit;
 
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(25,146,45,0) 0%, rgba(0,72,86,1) 100%);
+    @media only screen and (min-width: 516px) {
+        transform:scale(0);
+    }
     
-    transform:scale(0);
 
     top:0;
     display:flex;
@@ -75,15 +79,18 @@ button.activeStar{
         color:yellow;
     }
 
- 
- 
 }
-&:hover{
-    transform:scale(1.12);
-    div{
-        transform:translateY(0);  
-        transform:scale(inherit) ; 
-        backdrop-filter: brightness(0.8);
+
+
+@media only screen and (min-width: 516px) {
+    
+    &:hover{
+        transform:scale(1.12);
+        div{
+            transform:translateY(0);  
+            transform:scale(inherit) ; 
+            backdrop-filter: brightness(0.8);
+        }
     }
 }
 
