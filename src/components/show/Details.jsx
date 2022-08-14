@@ -3,7 +3,7 @@ import React from 'react'
 const Details = ({data}) => {
   const {status,network,premiered} = data;
   return (
-    <div>
+    <div style={{color:"white"}}>
       <p>
         Status : <span>{status}</span>
       </p>

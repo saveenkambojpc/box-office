@@ -42,8 +42,10 @@ export const SearchButtonWrapper = styled.div`
     border: none;
     outline: none;
     border-radius: 12px;
+    border:1px solid white;
     &:hover {
       cursor: pointer;
     }
   }
+  
 `;

@@ -34,9 +34,9 @@ const Starred = () => {
   return (
     <div>
 
-      {isLoading && <div>Shows are being loading</div>}
+      {isLoading && <div style={{textAlign:"center",color:"white"}}>Shows are being loading</div>}
 
-      {!isLoading && !shows && <div style={{textAlign:"center"}}>No Shows were added</div>}
+      {!isLoading && !shows && <div style={{textAlign:"center",color:"white"}}>No Shows were added</div>}
       {!isLoading && !error && <ShowGrid result={shows} />}
     </div>
   )

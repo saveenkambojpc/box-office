@@ -10,6 +10,7 @@ const RadioWrapper = styled.label`
   user-select: none;
   font-weight: 700;
   line-height: 1.65;
+  color:white;
   input {
     position: absolute;
     opacity: 0;

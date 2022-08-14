@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const MainDataWrapper = styled.div`
   display: flex;
   margin-bottom: 40px;
+  color:white;
 
   img {
     min-width: 250px;
