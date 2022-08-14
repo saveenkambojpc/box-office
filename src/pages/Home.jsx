@@ -46,6 +46,8 @@ function Home() {
 
         if (result && result.length > 0) {
 
+            console.log(result);
+
             return (
                 <div>
                     {result[0].show ? <ShowGrid result={result} /> : <ActorGrid result={result} />}

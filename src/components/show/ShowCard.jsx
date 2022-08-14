@@ -29,7 +29,7 @@ const ShowCard = ({ data, onStarClick }) => {
                 <p>{data.show.rating.average ? `Rating : ${data.show.rating.average}` : ''}</p>
               </div>
             </Link>
-            <button className={isStarred && 'activeStar'} type='submit'>{<AiFillStar onClick={onStarClick} />}</button>
+            <button className={isStarred ? 'activeStar':undefined} type='submit'>{<AiFillStar onClick={onStarClick} />}</button>
           </Card>
 
         </>

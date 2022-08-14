@@ -16,17 +16,19 @@ const ShowGrid = ({ result }) => {
 
         const onStarClick = () => {
           if (isStarred) {
-            console.log("Inside if Condition");
-            dispatchStarred({ type: 'REMOVE', showId: i.show.id });
+            console.log("You just clicked on star");
+            dispatchStarred({
+              type: 'REMOVE',
+              showId: i.show.id
+            });
           } else {
-            console.log("We are inside else onStarClick")
             dispatchStarred({
               type: 'ADD',
               showId: i.show.id
             });
           }
         }
-        i = {...i,isStarred};
+        i = { ...i, isStarred };
         return <ShowCard key={i.show.id} data={i} onStarClick={onStarClick} />
       })
 

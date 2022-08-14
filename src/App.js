@@ -5,12 +5,12 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from './components/Navbar';
-import Starred from "./pages/Starred";
 import Show from "./pages/Show";
+import Starred from "./pages/Starred";
 
 const routes = [
   {path: "/",component:<Home/>},
-  {path: "/starred",component:<Starred/>},
+  {path: "/starred", component: <Starred />},
   {path: "/show/:id",component:<Show />},
   {path: null, component:"404 Not Found please create it first"}, //keep it is last
 ]
