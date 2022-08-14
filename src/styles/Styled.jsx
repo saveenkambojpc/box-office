@@ -1,3 +1,4 @@
+// CSS for ShowCard
 import styled from "styled-components";
 
 export const FlexGrid = styled.div`
@@ -16,6 +17,26 @@ width:150px;
 
 overflow-y:hidden;
 overflow-x:hidden;
+
+
+button{
+    background:transparent;
+    position:absolute;
+    z-index:4;
+    outline:none;
+    border:0;
+    // backdrop-filter:blur(4)
+    right:0;
+    cursor:pointer;
+    top:0;
+    font-size:24px;
+    color:white;
+    backdrop-filter:blur(5px);
+
+}
+button.activeStar{
+    color:yellow;
+}
 
 .active{
     padding:0 8px;

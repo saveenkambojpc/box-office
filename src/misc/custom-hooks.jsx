@@ -15,7 +15,7 @@ function usePersistedReducer(reducer,initialState,key){
 
 function showsReducer(prevState,action){
     switch(action.type){
-        case 'Add':{
+        case 'ADD':{
             return [...prevState,action.showId]
         }
         case 'REMOVE':{

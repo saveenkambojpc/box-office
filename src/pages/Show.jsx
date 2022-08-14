@@ -40,7 +40,7 @@ const Show = () => {
 
 
     const [{ data, isLoading, error }, dispatch] = useReducer(reducer, initialState)
-    console.log(data,isLoading,error);
+    
     const { id } = useParams();
 
     useEffect(() => {
@@ -64,7 +64,7 @@ const Show = () => {
 
 
 
-    console.log("Value of isLoading ", isLoading)
+    
     if (isLoading) {
         return "Date is data loaded"
     }

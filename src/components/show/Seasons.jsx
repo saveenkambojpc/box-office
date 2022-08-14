@@ -6,7 +6,7 @@ const Seasons = ({ data }) => {
   const { _embedded } = data
   const { seasons } = _embedded; //arr
 
-  console.log(seasons.length);
+ 
 
   
 

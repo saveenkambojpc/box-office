@@ -12,6 +12,7 @@ export const SeasonsWrapper = styled.div`
 export const SeasonList = styled.div`
 display:inline;
 white-space: nowrap;
+font-weight:600;
   
   .season-item {
     margin:10px;
@@ -22,7 +23,6 @@ white-space: nowrap;
     max-width:160px;
     overflow:hidden;
     border-radius:10px;
-    background:yellow;
 
     img{
       min-width:100%;
